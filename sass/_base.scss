@@ -1,0 +1,104 @@
+// COLORS
+
+:root {
+  --color-primary: #262722;
+  --color-secondary: #cfaf76;
+  --color-secondary-dark: #b18f56;
+  --color-tertiary: #302c23;
+  --color-tertiary-light: #6c6555;
+  --color-test: #101d2c;
+
+  --coolor-grey-light-1: #faf9f9;
+  --coolor-grey-light-2: #f4f2f2;
+  --coolor-grey-light-3: #f0eeee;
+  --coolor-grey-light-4: #ccc;
+
+  --coolor-grey-dark-1: #333;
+  --coolor-grey-dark-2: #777;
+  --coolor-grey-dark-3: #999;
+
+  --color-dark-1: #020202;
+  --color-dark-2: #1a1a1a;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --shadow-deep: 0px 20px 30px -10px rgb(38, 57, 77);
+
+  --gradient-1: linear-gradient(
+    190deg,
+    rgba(27, 27, 27, 1) 20%,
+    rgba(1, 1, 1, 1) 80%
+  );
+  --gradient-1-rotate: linear-gradient(
+    10deg,
+    rgba(27, 27, 27, 1) 20%,
+    rgba(1, 1, 1, 1) 80%
+  );
+  --gradient-2: linear-gradient(
+    160deg,
+    rgba(47, 48, 43, 1) 0%,
+    rgba(26, 26, 26, 1) 65%
+  );
+
+  --gradient-3: linear-gradient(
+    190deg,
+    var(--coolor-grey-light-4),
+    var(--coolor-grey-light-1)
+  );
+}
+
+$rwd-mobile: 37.5em; // 600px
+$rwd-tab-portrait: 56.25em; // 900px
+$rwd-tab-landscape: 75em; // 1200px
+$rwd-large: 93.75em; // 1500px
+$rwd-xlarge: 106.25em; // 1700px
+$rwd-largest: 121em; //1920px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+
+  @media screen and (max-width: $rwd-tab-landscape) {
+    font-size: 56.25%; //9px
+  }
+
+  @media screen and (max-width: $rwd-tab-portrait) {
+    font-size: 50%; //8px
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-tertiary);
+  background-image: var(--gradient-1-rotate);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// @media (prefers-reduced-motion: reduce) {
+//   *,
+//   ::before,
+//   ::after {
+//     animation-delay: -1ms !important;
+//     animation-duration: 1ms !important;
+//     animation-iteration-count: 1 !important;
+//     background-attachment: initial !important;
+//     scroll-behavior: auto !important;
+//     transition-duration: 0s !important;
+//     transition-delay: 0s !important;
+//   }
+// }

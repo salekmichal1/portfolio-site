@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./src/style.css" />
+    <script defer="" src="./src/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header" id="home">
+        <nav class="nav">
+          <img src="./img/logo.svg" alt="logo" class="nav__logo" id="logo" />
+
+          <button
+            class="hamburger-icon"
+            aria-controls="mobile-menu"
+            aria-expanded="false">
+            <svg
+              fill="var(--color-secondary)"
+              class="hamburger"
+              viewBox="0 0 100 100"
+              width="4.5rem"
+              height="4.5rem">
+              <rect
+                class="line top"
+                width="100"
+                height="8"
+                y="20"
+                rx="4"></rect>
+              <rect
+                class="line middle"
+                width="100"
+                height="8"
+                y="45"
+                rx="4"></rect>
+              <rect
+                class="line bottom"
+                width="100"
+                height="8"
+                y="70"
+                rx="4"></rect>
+            </svg>
+          </button>
+
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a class="nav__link" href="#home"> Home </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section--1"> About Me </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section--2"> Skills </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section--3"> Projects </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--btn" href="#section--4">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="nav-mobile nav-mobile__slide" id="mobile-menu">
+          <ul class="nav-mobile__links">
+            <li class="nav-mobile__item">
+              <a href="#home" class="nav-mobile__link">Home</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#section--1" class="nav-mobile__link">About Me</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#section--2" class="nav-mobile__link">Skills</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#section--3" class="nav-mobile__link">Projects</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#section--4" class="nav-mobile__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__content">
+          <div class="header__hero-text">
+            <h2 class="header__hero-text-greeting header__text--animation">
+              Hello and welcom, I'm
+            </h2>
+            <h1 class="header__hero-text-name header__text--animation">
+              Michał
+            </h1>
+            <h1 class="header__hero-text-name header__text--animation">
+              Sałek
+            </h1>
+
+            <p class="header__hero-text-caption header__text--animation">
+              Front-end | Web design | Development
+            </p>
+            <button class="btn--text btn--scroll-to header__text--animation">
+              Learn more &DownArrow;
+            </button>
+          </div>
+          <div class="header__mask-container">
+            <!-- <div class="header__color-image"></div> -->
+            <img
+              class="header__color-image"
+              srcset="
+                ./img/hero_img_color_small.png  1200w,
+                ./img/hero_img_color_large.png 15000w
+              "
+              sizes="(max-width: 1500px) 1200px, (min-width: 1500px) 1500px"
+              src="./img/hero_img_color_large.png"
+              alt="person" />
+            <img
+              class="header__black-image"
+              srcset="
+                ./img/hero_img_black_small.png  1200w,
+                ./img/hero_img_black_large.png 15000w
+              "
+              sizes="(max-width: 1500px) 1200px, (min-width: 1500px) 1500px"
+              src="./img/hero_img_black_large.png"
+              alt="person" />
+          </div>
+        </div>
+      </header>
+
+      <section class="section" id="section--1">
+        <div class="about-me">
+          <h1 class="section__name">About Me</h1>
+          <h2 class="section__header">Here is some information about me</h2>
+        </div>
+        <div class="about-me__description-container">
+          <div class="about-me__description-container--left">
+            <div class="about-me__show-descritpion-left">
+              <p class="about-me__description-border section__description">
+                I'm a web developer who's passionate about creating websites
+                with user-friendly design and good coding practices. As a
+                beginner, I'm eager to learn and gain experience, and I'm always
+                on the lookout for new opportunities to grow my skills.
+              </p>
+            </div>
+            <div class="about-me__show-descritpion-left">
+              <p class="about-me__description-border section__description">
+                I'm also a music enthusiast and enjoy playing the guitar in my
+                free time. Music allows me to unwind and find inspiration, which
+                I can then bring back to my work as a developer. I'm also a big
+                fan of motorization and computer games, find that these hobbies
+                help me stay curious and engaged with technology.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-me__description-container--right">
+            <div class="about-me__show-descritpion-right">
+              <p class="about-me__description-border section__description">
+                Honesty and directness are values that I hold dear in both my
+                personal and professional life. I believe that transparency and
+                open communication are essential for building strong
+                relationships and creating successful projects. As a team
+                member, I strive to always be upfront, and to deliver work that
+                is of the highest quality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section--2">
+        <div class="skills-container">
+          <div class="skills-heading">
+            <h1 class="section__name">Skillset</h1>
+            <p class="section__description">
+              I have skills that fit well with an aspiring front end developer.
+              In addition, the desire for development and ambition in this
+              direction, should interest those, who are looking for someone to a
+              starting position.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <div class="skills-grid--programing">
+              <svg class="skills-grid__icon">
+                <use xlink:href="img/symbol-defs.svg#icon-code"></use>
+              </svg>
+              <h2 class="skills-grid__description">Programing</h2>
+              <p class="skills-grid__text">
+                I am proficient in HTML, CSS, and JavaScript, and have
+                experience using front-end tools like Git, GitHub etc. which are
+                indispensable. I also have a strong understanding of browser
+                compatibility and performance optimization, and enjoy exploring
+                new tools and technologies to improve my skills.
+              </p>
+            </div>
+            <div class="skills-grid--design">
+              <svg class="skills-grid__icon">
+                <use xlink:href="img/symbol-defs.svg#paint-brush"></use>
+              </svg>
+              <h2 class="skills-grid__description">Design</h2>
+              <p class="skills-grid__text">
+                While my primary focus is on front-end programming, I have a
+                keen eye for design and enjoy collaborating with designers to
+                bring their visions to life. I am familiar with design tools
+                like Adobe Creative Suite and understand the importance of good
+                design.
+              </p>
+            </div>
+            <div class="."></div>
+            <div class="skills-grid--uxui">
+              <svg class="skills-grid__icon">
+                <use xlink:href="img/symbol-defs.svg#icon-tools"></use>
+              </svg>
+              <h2 class="skills-grid__description">UX/UI</h2>
+              <p class="skills-grid__text">
+                I am passionate about creating engaging and intuitive user
+                interfaces. I have a deep understanding of user experience
+                principles and best practices, and am always looking for ways to
+                improve the usability and accessibility of my applications.
+              </p>
+            </div>
+            <div class="skills-grid--certification">
+              <svg class="skills-grid__icon">
+                <use xlink:href="img/symbol-defs.svg#icon-certificate"></use>
+              </svg>
+              <h2 class="skills-grid__description">Certification</h2>
+              <p class="skills-grid__text">
+                98-366:MTA: Networking Fundamentals <br />
+                98-364:MTA: Database Fundamentals <br />
+                98-361:MTA: Software Development Fundamentals <br />
+                Information Technology Specialist in HTML and CSS <br />
+                Information Technology Specialist in Network Security <br />
+                JetBrains Academy: Frontend Core
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section--3">
+        <div class="projects">
+          <h1 class="section__name">Projects</h1>
+          <h2 class="section__header">
+            Explore some of My Web Development Projects and Solutions
+          </h2>
+          <div class="projects-container">
+            <a
+              href="https://michal-bankist-website.netlify.app/"
+              target="_blank"
+              class="projects-container__link">
+              <div
+                class="projects-container__project projects-container__project--1">
+                <svg class="projects-container__icon">
+                  <use xlink:href="img/symbol-defs.svg#icon-library"></use>
+                </svg>
+                <h2 class="projects-container__project-name">Bank Website</h2>
+                <p class="projects-container__project-text">
+                  Representative website for a bank company. It features several
+                  sections that advertise the bank's services in a modern way.
+                  It features smooth animations and transitions. In addition,
+                  the site uses features that support work on older devices.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://michal-banking-app.netlify.app/"
+              target="_blank"
+              class="projects-container__link">
+              <div
+                class="projects-container__project projects-container__project--2">
+                <svg class="projects-container__icon">
+                  <use xlink:href="img/symbol-defs.svg#icon-banknote"></use>
+                </svg>
+                <h2 class="projects-container__project-name">
+                  Bank Application
+                </h2>
+
+                <p class="projects-container__project-text">
+                  The design of the banking application, which complements the
+                  previously presented page. It allows you to make transfers,
+                  requests for loans from the bank. It shows the history of
+                  performed transactions and account balance. It also supports
+                  multiple currencies and users from different countries
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://training-map-app.netlify.app"
+              target="_blank"
+              class="projects-container__link">
+              <div
+                class="projects-container__project projects-container__project--3">
+                <svg class="projects-container__icon">
+                  <use xlink:href="img/symbol-defs.svg#icon-map-o"></use>
+                </svg>
+                <h2 class="projects-container__project-name">
+                  Training application
+                </h2>
+
+                <p class="projects-container__project-text">
+                  The application supports people who spend time actively. It is
+                  an interactive map on which we can record the history of our
+                  trainings. Trainings are differentiated into running and
+                  cycling. Depending on the selected option, they differ in
+                  exercise parameters
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://salek-michal-cv.netlify.app/"
+              target="_blank"
+              class="projects-container__link">
+              <div
+                class="projects-container__project projects-container__project--4">
+                <svg class="projects-container__icon">
+                  <use
+                    xlink:href="img/symbol-defs.svg#icon-graduation-cap"></use>
+                </svg>
+                <h2 class="projects-container__project-name">
+                  Curriculum vitae
+                </h2>
+
+                <p class="projects-container__project-text">
+                  Here you can find and download a classic cv, in which you will
+                  find more information about me, in a summarized form
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section--4">
+        <div class="contact-container">
+          <div class="contact-container__left-col">
+            <h1 class="section__name">Contact</h1>
+            <h2 class="section__header">Let's be in touch</h2>
+            <p class="section__description">
+              Thank you for visiting my website! I look forward to connecting
+              with you, and learning more, about how I can help meet your needs.
+              I am always happy to hear from visitors, and I will do my best to
+              respond promptly to your message.
+            </p>
+            <div class="contact-container__bearings">
+              <div class="contact-container__bearings--mail">
+                <svg class="contact-container__mail-phone-icon">
+                  <use xlink:href="img/symbol-defs.svg#icon-mail"></use>
+                </svg>
+                <p class="contact-container__mail-phone">
+                  <a
+                    class="contact-container__mail-phone--link"
+                    href="mailto:michal282@gmail.com"
+                    >michal282@gmail.com
+                  </a>
+                </p>
+              </div>
+              <div class="contact-container__bearings--phone">
+                <svg class="contact-container__mail-phone-icon">
+                  <use xlink:href="img/symbol-defs.svg#icon-phone-square"></use>
+                </svg>
+                <p class="contact-container__mail-phone">
+                  <a
+                    class="contact-container__mail-phone--link"
+                    href="tel:+48786818024"
+                    >+48 786 818 024
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-container__connect">
+              <h2 class="contact-container__icons-header">Connect with me:</h2>
+              <div class="contact-container__icon-box">
+                <a
+                  class="contact-container__connect-link"
+                  href="https://m.me/michal282a"
+                  target="_blank">
+                  <svg class="contact-container__connect-icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-messenger"></use>
+                  </svg>
+                </a>
+                <a
+                  class="contact-container__connect-link"
+                  href="https://www.facebook.com/michal282a/"
+                  target="_blank">
+                  <svg class="contact-container__connect-icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-facebook2"></use>
+                  </svg>
+                </a>
+                <a
+                  class="contact-container__connect-link"
+                  href="https://github.com/salekmichal1"
+                  target="_blank">
+                  <svg class="contact-container__connect-icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-github"></use>
+                  </svg>
+                </a>
+                <a
+                  class="contact-container__connect-link"
+                  href="https://salek-michal-cv.netlify.app/"
+                  target="_blank">
+                  <svg class="contact-container__connect-icon">
+                    <use
+                      xlink:href="img/symbol-defs.svg#icon-graduation-cap"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-container__right-col">
+            <h2 class="contact-container__right-col-heading">
+              Resides in Kraków
+            </h2>
+            <img
+              class="contact-container__right-col-image"
+              src="./img/krakow.png"
+              alt="krakow" />
+            <p class="contact-container__right-col-text">
+              Due to this, in the case of stationary work, this is the perimeter
+              of my operation, while also remote work is not an obstacle for me
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="legal">&copy; 2023 by Michał Sałek. All rights reserved.</div>
+    </div>
+  </body>
+</html>

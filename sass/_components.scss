@@ -1,0 +1,38 @@
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  //////////////
+  background-image: var(--gradient-1);
+  /////////////
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow-dark);
+
+  @media only screen and (max-width: $rwd-largest) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@keyframes hero-img-animation {
+  0% {
+    -webkit-mask-position: 0% 0%;
+    mask-position: 0% 0%;
+  }
+  100% {
+    -webkit-mask-position: 100% 0%;
+    mask-position: 100% 0%;
+  }
+}
+
+@keyframes hero-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
