@@ -65,8 +65,7 @@ body {
   background-image: var(--gradient-1-rotate);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0;
-  animation: site-fade-in 0.3s ease-in forwards; }
+  opacity: 0; }
 
 .container {
   max-width: 1920px;
@@ -288,8 +287,8 @@ body {
     mask-size: cover;
     mask-position: 0% 0%;
     transition: -webkit-mask-position;
-    animation: hero-img-animation 1500ms steps(46) forwards;
-    animation-delay: 0.3s; }
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s; }
     @media only screen and (min-width: 121em) {
       .header__black-image {
         max-height: 99rem; } }
@@ -311,10 +310,11 @@ body {
     animation: hero-text-animation 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
   .header__hero-text-greeting {
     color: var(--color-secondary);
+    opacity: 0;
     font-size: 5rem;
     font-weight: 400;
-    animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s; }
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s; }
     @media only screen and (max-width: 106.25em) {
       .header__hero-text-greeting {
         font-size: 4rem; } }
@@ -323,12 +323,13 @@ body {
         font-size: 3rem; } }
   .header__hero-text-name {
     color: var(--coolor-grey-light-3);
+    opacity: 0;
     font-size: 14rem;
     font-weight: 300;
     letter-spacing: 0.4rem;
     line-height: 1;
-    animation-delay: 0.6s;
-    -webkit-animation-delay: 0.6s; }
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s; }
     @media only screen and (max-width: 106.25em) {
       .header__hero-text-name {
         font-size: 12rem; } }
@@ -337,10 +338,11 @@ body {
         font-size: 10rem; } }
   .header__hero-text-caption {
     color: var(--coolor-grey-light-3);
+    opacity: 0;
     margin-top: 1.8rem;
     font-size: 1.5rem;
-    animation-delay: 0.7s;
-    -webkit-animation-delay: 0.7s; }
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s; }
     @media only screen and (max-width: 106.25em) {
       .header__hero-text-caption {
         font-size: 1.4rem; } }
@@ -352,8 +354,9 @@ body {
       max-height: 108rem; } }
 
 .btn--scroll-to {
-  animation-delay: 0.8s;
-  -webkit-animation-delay: 0.8s; }
+  opacity: 0;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s; }
 
 .btn--text {
   display: inline-block;

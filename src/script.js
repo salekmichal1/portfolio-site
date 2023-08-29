@@ -1,5 +1,6 @@
 'use-strict';
 
+const body = document.querySelector('body');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 const navBar = document.querySelector('.nav');
@@ -9,6 +10,30 @@ const mailAndPhone = document.querySelectorAll(
 );
 const hamburgerBtn = document.querySelector('.hamburger-icon');
 const mobileMenu = document.querySelector('#mobile-menu');
+const headerBlackImage = document.querySelector('.header__black-image');
+const headerColorImage = document.querySelector('.header__color-image');
+const headerHeroTextName = document.querySelectorAll('.header__hero-text-name');
+const headerHeroTextCaption = document.querySelector(
+  '.header__hero-text-caption'
+);
+const headerHeroTextGreeting = document.querySelector(
+  '.header__hero-text-greeting'
+);
+
+///////////////////////////////////////
+//// Header animation waiting
+
+headerColorImage.addEventListener('load', addAdnimations);
+
+function addAdnimations() {
+  body.style.animation = 'site-fade-in 0.2s ease-in forwards';
+  headerBlackImage.style.animation =
+    'hero-img-animation 1500ms steps(46) forwards';
+  headerHeroTextGreeting.classList.add('header__text--animation');
+  headerHeroTextName.forEach(el => el.classList.add('header__text--animation'));
+  headerHeroTextCaption.classList.add('header__text--animation');
+  btnScrollTo.classList.add('header__text--animation');
+}
 
 ///////////////////////////////////////
 //// Scroling btn learn more
