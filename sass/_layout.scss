@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  inset: 0;
   height: 9rem;
   width: 100%;
   padding: 0 6rem;
@@ -180,7 +181,12 @@
 
 .header {
   height: 100vh;
-  overflow: hidden;
+  @media only screen and (max-width: $rwd-tab-landscape) {
+    margin-top: 9rem;
+  }
+  @media only screen and (max-width: $rwd-mobile) {
+    margin-top: 6rem;
+  }
 
   @media only screen and (max-width: $rwd-tab-landscape) {
     height: auto;
@@ -188,12 +194,7 @@
 
   &__content {
     display: flex;
-    @media only screen and (max-width: $rwd-tab-landscape) {
-      margin-top: 9rem;
-    }
-    @media only screen and (max-width: $rwd-mobile) {
-      margin-top: 6rem;
-    }
+    overflow: hidden;
   }
 
   &__hero-text {
@@ -262,6 +263,7 @@
     transition: -webkit-mask-position;
 
     animation: hero-img-animation 1500ms steps(46) forwards;
+    animation-delay: 0.3s;
   }
 
   &__color-image {
@@ -288,8 +290,8 @@
     //text-transform: uppercase;
     font-size: 5rem;
     font-weight: 400;
-    animation-delay: 0.2s;
-    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
     @media only screen and (max-width: $rwd-xlarge) {
       font-size: 4rem;
     }
@@ -306,8 +308,8 @@
     font-weight: 300;
     letter-spacing: 0.4rem;
     line-height: 1;
-    animation-delay: 0.3s;
-    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
     @media only screen and (max-width: $rwd-xlarge) {
       font-size: 12rem;
     }
@@ -321,8 +323,8 @@
     color: var(--coolor-grey-light-3);
     margin-top: 1.8rem;
     font-size: 1.5rem;
-    animation-delay: 0.4s;
-    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s;
     @media only screen and (max-width: $rwd-xlarge) {
       font-size: 1.4rem;
     }
@@ -338,8 +340,8 @@
 }
 
 .btn--scroll-to {
-  animation-delay: 0.5s;
-  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
 }
 
 .btn--text {
