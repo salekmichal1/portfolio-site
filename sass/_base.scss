@@ -87,6 +87,8 @@ body {
   background-image: var(--gradient-1-rotate);
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0;
+  animation: site-fade-in 0.2s ease-in forwards;
 }
 
 // @media (prefers-reduced-motion: reduce) {
