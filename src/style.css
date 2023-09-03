@@ -154,6 +154,7 @@ body {
   .nav.sticky {
     position: fixed;
     border-bottom: none;
+    margin: 0 auto;
     background-color: var(--color-dark-2); } }
   @media only screen and (min-width: 75em) and (min-width: 121em) {
     .nav.sticky {
@@ -233,18 +234,24 @@ body {
 
 .header {
   height: 100vh; }
-  @media only screen and (max-width: 75em) {
-    .header {
-      margin-top: 9rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .header {
-      margin-top: 6rem; } }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 56.25em) {
     .header {
       height: auto; } }
+  @media only screen and (max-width: 75em) and (min-height: 67.5em) {
+    .header {
+      height: auto; } }
+  @media screen and (min-width: 121em) and (min-height: 67.5em) {
+    .header {
+      height: 108rem; } }
   .header__content {
     display: flex;
     overflow: hidden; }
+    @media only screen and (max-width: 75em) {
+      .header__content {
+        padding-top: 9rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__content {
+        padding-top: 6rem; } }
   .header__hero-text {
     color: var(--coolor-grey-light-1);
     margin: 4rem 0rem 6rem 9rem;
@@ -266,8 +273,13 @@ body {
         margin: 0; } }
   .header__mask-container {
     position: relative;
-    top: 0;
-    left: 0; }
+    height: calc(100vh - 9rem); }
+    @media only screen and (max-width: 75em) and (min-height: 67.5em) {
+      .header__mask-container {
+        height: auto; } }
+    @media screen and (min-width: 121em) and (min-height: 67.5em) {
+      .header__mask-container {
+        height: 99rem; } }
     @media only screen and (max-width: 56.25em) {
       .header__mask-container {
         display: none; } }
@@ -276,10 +288,7 @@ body {
         margin-left: 5rem; } }
   .header__black-image {
     position: relative;
-    top: 0;
-    left: 0;
-    height: calc(100vh - 9rem);
-    min-height: 100%;
+    height: 100%;
     -webkit-mask-image: url("/img/inkmask_center.png");
     -webkit-mask-size: cover;
     -webkit-mask-position: 0% 0%;
@@ -289,22 +298,12 @@ body {
     transition: -webkit-mask-position;
     animation-delay: 0.2s;
     -webkit-animation-delay: 0.2s; }
-    @media only screen and (min-width: 121em) {
+    @media only screen and (max-width: 75em) and (min-height: 67.5em) {
       .header__black-image {
-        max-height: 99rem; } }
-    @media only screen and (max-width: 121em) and (min-width: 56.25em) and (min-height: 67.5em) {
-      .header__black-image {
-        max-height: 99rem; } }
+        height: auto; } }
   .header__color-image {
-    height: calc(100vh - 9rem);
-    min-height: 100%;
+    height: 100%;
     position: absolute; }
-    @media only screen and (min-width: 121em) {
-      .header__color-image {
-        max-height: 99rem; } }
-    @media only screen and (max-width: 121em) and (min-width: 56.25em) and (min-height: 67.5em) {
-      .header__color-image {
-        max-height: 99rem; } }
   .header__text--animation {
     opacity: 0;
     animation: hero-text-animation 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
@@ -346,12 +345,6 @@ body {
     @media only screen and (max-width: 106.25em) {
       .header__hero-text-caption {
         font-size: 1.4rem; } }
-  @media only screen and (min-width: 121em) {
-    .header {
-      max-height: 108rem; } }
-  @media only screen and (max-width: 121em) and (min-width: 56.25em) and (min-height: 67.5em) {
-    .header {
-      max-height: 108rem; } }
 
 .btn--scroll-to {
   opacity: 0;
@@ -546,10 +539,12 @@ body {
 
 .projects-container {
   display: flex;
-  gap: 5rem;
+  flex-wrap: wrap;
+  gap: 6rem;
   padding-top: 10rem;
   margin-bottom: 5rem; }
   .projects-container__link:link, .projects-container__link:visited {
+    min-width: 34rem;
     flex: 1;
     padding: 3rem;
     text-align: center;
@@ -591,8 +586,7 @@ body {
         font-size: 2rem; } }
   @media only screen and (max-width: 106.25em) {
     .projects-container {
-      padding-top: 7rem;
-      gap: 3rem; } }
+      padding-top: 7rem; } }
   @media only screen and (max-width: 93.75em) {
     .projects-container {
       flex-wrap: wrap;

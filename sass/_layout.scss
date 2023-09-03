@@ -72,6 +72,7 @@
   .nav.sticky {
     position: fixed;
     border-bottom: none;
+    margin: 0 auto;
     background-color: var(--color-dark-2);
 
     @media only screen and (min-width: $rwd-largest) {
@@ -181,20 +182,38 @@
 
 .header {
   height: 100vh;
-  @media only screen and (max-width: $rwd-tab-landscape) {
-    margin-top: 9rem;
-  }
-  @media only screen and (max-width: $rwd-mobile) {
-    margin-top: 6rem;
-  }
 
-  @media only screen and (max-width: $rwd-tab-landscape) {
+  @media only screen and (max-width: $rwd-tab-portrait) {
     height: auto;
   }
+
+  @media only screen and (max-width: $rwd-tab-landscape) and (min-height: 67.5em) {
+    height: auto;
+  }
+
+  @media screen and (min-width: $rwd-largest) and (min-height: 67.5em) {
+    height: 108rem;
+  }
+
+  // @media only screen and (min-width: $rwd-largest) {
+  //   max-height: 108rem;
+  // }
+
+  // @media only screen and (max-width: $rwd-largest) and (min-width: $rwd-tab-portrait) and (min-height: 67.5em) {
+  //   max-height: 108rem;
+  // }
 
   &__content {
     display: flex;
     overflow: hidden;
+
+    @media only screen and (max-width: $rwd-tab-landscape) {
+      padding-top: 9rem;
+    }
+
+    @media only screen and (max-width: $rwd-mobile) {
+      padding-top: 6rem;
+    }
   }
 
   &__hero-text {
@@ -224,8 +243,15 @@
 
   &__mask-container {
     position: relative;
-    top: 0;
-    left: 0;
+    height: calc(100vh - 9rem);
+
+    @media only screen and (max-width: $rwd-tab-landscape) and (min-height: 67.5em) {
+      height: auto;
+    }
+
+    @media screen and (min-width: $rwd-largest) and (min-height: 67.5em) {
+      height: 99rem; // 1080px - nav
+    }
 
     @media only screen and (max-width: $rwd-tab-portrait) {
       display: none;
@@ -237,21 +263,23 @@
   }
 
   &__black-image {
-    //inset: 0;
-    //background-image: url("/img/hero_img_black.png");
-    //background-size: cover;
     position: relative;
-    top: 0;
-    left: 0;
-    height: calc(100vh - 9rem);
-    min-height: 100%;
-    @media only screen and (min-width: $rwd-largest) {
-      max-height: 99rem;
-    }
+    // top: 0;
+    // left: 0;
+    // height: calc(100vh - 9rem);
+    height: 100%;
 
-    @media only screen and (max-width: $rwd-largest) and (min-width: $rwd-tab-portrait) and (min-height: 67.5em) {
-      max-height: 99rem;
-    }
+    // @media only screen and (max-width: 62.5em) and (min-height: 50em) {
+    //   max-height: 80rem;
+    // }
+
+    // @media only screen and (min-width: $rwd-largest) {
+    //   max-height: 99rem;
+    // }
+
+    // @media only screen and (max-width: $rwd-largest) and (min-width: $rwd-tab-portrait) and (min-height: 67.5em) {
+    //   max-height: 99rem;
+    // }
 
     -webkit-mask-image: url('/img/inkmask_center.png');
     -webkit-mask-size: cover;
@@ -263,19 +291,24 @@
     animation-delay: 0.2s;
     -webkit-animation-delay: 0.2s;
     // animation: hero-img-animation 1500ms steps(46) forwards;
+
+    @media only screen and (max-width: $rwd-tab-landscape) and (min-height: 67.5em) {
+      height: auto;
+    }
   }
 
   &__color-image {
-    height: calc(100vh - 9rem);
-    min-height: 100%;
+    // height: calc(100vh - 9rem);
+    height: 100%;
     position: absolute;
-    @media only screen and (min-width: $rwd-largest) {
-      max-height: 99rem;
-    }
 
-    @media only screen and (max-width: $rwd-largest) and (min-width: $rwd-tab-portrait) and (min-height: 67.5em) {
-      max-height: 99rem;
-    }
+    // @media only screen and (min-width: $rwd-largest) {
+    //   max-height: 99rem;
+    // }
+
+    // @media only screen and (max-width: $rwd-largest) and (min-width: $rwd-tab-portrait) and (min-height: 67.5em) {
+    //   max-height: 99rem;
+    // }
   }
 
   &__text--animation {
@@ -330,14 +363,6 @@
     @media only screen and (max-width: $rwd-xlarge) {
       font-size: 1.4rem;
     }
-  }
-
-  @media only screen and (min-width: $rwd-largest) {
-    max-height: 108rem;
-  }
-
-  @media only screen and (max-width: $rwd-largest) and (min-width: $rwd-tab-portrait) and (min-height: 67.5em) {
-    max-height: 108rem;
   }
 }
 
@@ -626,12 +651,15 @@
 
 .projects-container {
   display: flex;
-  gap: 5rem;
+  flex-wrap: wrap;
+  gap: 6rem;
   padding-top: 10rem;
   margin-bottom: 5rem;
 
   &__link:link,
   &__link:visited {
+    min-width: 34rem;
+
     flex: 1;
     padding: 3rem;
     text-align: center;
@@ -691,7 +719,6 @@
 
   @media only screen and (max-width: $rwd-xlarge) {
     padding-top: 7rem;
-    gap: 3rem;
   }
 
   @media only screen and (max-width: $rwd-large) {
