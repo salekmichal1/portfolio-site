@@ -141,10 +141,10 @@ const sectionObserver = new IntersectionObserver(sectionReveal, {
   threshold: 0.15,
 });
 
-// allSections.forEach(function (section) {
-//   sectionObserver.observe(section);
-//   section.classList.add('section--hidden');
-// });
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
 
 /////////////////////////////////////
 // About me show efect
