@@ -449,7 +449,7 @@
             <h2 class="contact-container__form-heading">Get in touch:</h2>
 
             <form
-              action="https://formsubmit.co/michal282a@gmail.com"
+              action="https://formsubmit.co/6ee564dec5c43de21c6411f5cc99761c"
               method="POST"
               class="contact-container__form">
               <input
@@ -460,6 +460,10 @@
                 placeholder="Name"
                 required />
               <input
+                type="hidden"
+                name="_next"
+                value="https://thank-you-subpage.netlify.app/" />
+              <input
                 type="email"
                 name="email"
                 id="contact-email"
@@ -469,7 +473,7 @@
               <input
                 type="text"
                 id="contact-subject"
-                name="_subject"
+                name="subject"
                 class="contact-container__form-item"
                 placeholder="Subject"
                 required />
@@ -479,10 +483,7 @@
                 class="contact-container__form-item"
                 rows="5"
                 placeholder="Message"></textarea>
-              <input
-                type="hidden"
-                name="_next"
-                value="https://salek-michal-cv.netlify.app/" />
+
               <button type="submit" class="contact-container__form-btn">
                 Send message
               </button>

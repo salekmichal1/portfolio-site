@@ -813,6 +813,7 @@
     border: none;
     font-size: 1.6rem;
     color: var(--coolor-grey-light-4);
+    font-family: inherit;
 
     &:focus {
       filter: brightness(125%);
@@ -840,6 +841,7 @@
     font-size: 1.6rem;
     font-weight: 400;
     transition: all 0.3s;
+    font-family: inherit;
     cursor: pointer;
 
     &:hover {
@@ -953,6 +955,8 @@
 #contact-message {
   resize: vertical;
   max-height: 30rem;
+  min-height: 5rem;
+  font-family: inherit;
 }
 
 .legal {
