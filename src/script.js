@@ -2,7 +2,7 @@
 
 const body = document.querySelector('body');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
+const sectionOne = document.querySelector('#section--1');
 const navBar = document.querySelector('.nav');
 const header = document.querySelector('.header');
 const mailAndPhone = document.querySelectorAll(
@@ -39,7 +39,7 @@ function addAdnimations() {
 //// Scroling btn learn more
 
 btnScrollTo.addEventListener('click', function () {
-  section1.scrollIntoView({ behavior: 'smooth' });
+  sectionOne.scrollIntoView({ behavior: 'smooth' });
 });
 
 ///////////////////////////////////////
@@ -141,10 +141,10 @@ const sectionObserver = new IntersectionObserver(sectionReveal, {
   threshold: 0.15,
 });
 
-allSections.forEach(function (section) {
-  sectionObserver.observe(section);
-  section.classList.add('section--hidden');
-});
+// allSections.forEach(function (section) {
+//   sectionObserver.observe(section);
+//   section.classList.add('section--hidden');
+// });
 
 /////////////////////////////////////
 // About me show efect
