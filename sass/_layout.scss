@@ -160,7 +160,6 @@
 
 .line {
   height: 2px;
-  border-radius: 5px;
   width: 2.6rem;
   background-color: var(--color-secondary);
   transform: translateX(0);
@@ -223,7 +222,6 @@
   position: absolute;
   background-color: var(--color-secondary);
   height: 2px;
-  border-radius: 5px;
   width: 100%;
   transition: all;
   transition-duration: 500ms;
