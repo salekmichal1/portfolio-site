@@ -8,7 +8,7 @@ const header = document.querySelector('.header');
 const mailAndPhone = document.querySelectorAll(
   '.contact-container__bearings--copy-phone, .contact-container__bearings--copy-mail'
 );
-const hamburgerBtn = document.querySelector('.hamburger-icon');
+const hamburgerBtn = document.querySelector('.hamburger-btn');
 const mobileMenu = document.querySelector('#mobile-menu');
 const headerBlackImage = document.querySelector('.header__black-image');
 const headerColorImage = document.querySelector('.header__color-image');
