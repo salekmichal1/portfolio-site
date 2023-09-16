@@ -1057,6 +1057,13 @@
   }
 }
 
+.email-validation {
+  display: none;
+  font-size: 1.4rem;
+  color: var(--color-secondary-dark);
+  margin-left: 1.6rem;
+}
+
 .connect {
   margin-top: 4rem;
   display: grid;

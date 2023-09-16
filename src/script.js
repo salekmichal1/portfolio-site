@@ -19,6 +19,9 @@ const headerHeroTextCaption = document.querySelector(
 const headerHeroTextGreeting = document.querySelector(
   '.header__hero-text-greeting'
 );
+const contactFormMail = document.getElementById('contact-email');
+const mailValidationLabel = document.querySelector('.email-validation');
+const formSubmitBtn = document.querySelector('.contact-container__form-btn');
 
 ///////////////////////////////////////
 //// Header animation waiting
@@ -141,10 +144,10 @@ const sectionObserver = new IntersectionObserver(sectionReveal, {
   threshold: 0.15,
 });
 
-allSections.forEach(function (section) {
-  sectionObserver.observe(section);
-  section.classList.add('section--hidden');
-});
+// allSections.forEach(function (section) {
+//   sectionObserver.observe(section);
+//   section.classList.add('section--hidden');
+// });
 
 /////////////////////////////////////
 // About me show efect
@@ -180,4 +183,19 @@ allAboutMeDescLeft.forEach(function (description) {
 allAboutMeDescRight.forEach(function (description) {
   descriptionObserver.observe(description);
   description.classList.add('about-me--hidden-right');
+});
+
+/////////////////////////////////////
+// Email validation
+
+const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+contactFormMail.addEventListener('change', function (event) {
+  if (!regex.test(event.target.value)) {
+    mailValidationLabel.style.display = 'block';
+    formSubmitBtn.disabled = true;
+  } else {
+    mailValidationLabel.style.display = 'none';
+    formSubmitBtn.disabled = false;
+  }
 });

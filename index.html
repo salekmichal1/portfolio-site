@@ -479,6 +479,9 @@
                 type="hidden"
                 name="_next"
                 value="https://thank-you-subpage.netlify.app/" />
+              <label for="contact-email" class="email-validation">
+                Invalid email address
+              </label>
               <input
                 type="email"
                 name="email"
@@ -498,6 +501,7 @@
                 name="message"
                 class="contact-container__form-item"
                 rows="5"
+                maxlength="600"
                 placeholder="Message"></textarea>
 
               <button type="submit" class="contact-container__form-btn">
