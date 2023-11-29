@@ -353,8 +353,11 @@
   // }
 
   &__content {
-    display: flex;
     overflow: hidden;
+
+    @media only screen and (min-width: $rwd-tab-portrait) {
+      display: flex;
+    }
 
     @media only screen and (max-width: $rwd-tab-landscape) {
       padding-top: 9rem;

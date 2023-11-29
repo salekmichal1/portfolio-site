@@ -318,8 +318,10 @@ body {
     .header {
       height: 108rem; } }
   .header__content {
-    display: flex;
     overflow: hidden; }
+    @media only screen and (min-width: 56.25em) {
+      .header__content {
+        display: flex; } }
     @media only screen and (max-width: 75em) {
       .header__content {
         padding-top: 9rem; } }
