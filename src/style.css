@@ -652,7 +652,9 @@ body {
     color: var(--coolor-grey-light-4); }
   .projects-container__project-name {
     color: var(--color-secondary);
-    font-size: 2.2rem; }
+    font-size: 2.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem; }
   .projects-container__project-text {
     color: var(--coolor-grey-light-3);
     font-size: 1.5rem; }
