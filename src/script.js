@@ -11,7 +11,7 @@ const mailAndPhone = document.querySelectorAll(
 const hamburgerBtn = document.querySelector('.hamburger-btn');
 const mobileMenu = document.querySelector('#mobile-menu');
 const headerBlackImage = document.querySelector('.header__black-image');
-const headerColorImage = document.querySelector('.header__color-image');
+// const headerColorImage = document.querySelector('.header__color-image');
 const headerHeroTextName = document.querySelectorAll('.header__hero-text-name');
 const headerHeroTextCaption = document.querySelector(
   '.header__hero-text-caption'
@@ -26,7 +26,7 @@ const formSubmitBtn = document.querySelector('.contact-container__form-btn');
 ///////////////////////////////////////
 //// Header animation waiting
 
-headerColorImage.addEventListener('load', addAdnimations);
+window.addEventListener('load', addAdnimations);
 
 function addAdnimations() {
   body.style.animation = 'site-fade-in 0.2s ease-in forwards';
